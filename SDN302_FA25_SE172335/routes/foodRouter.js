@@ -4,5 +4,5 @@ const foodController = require("../controllers/foodController");
 const authInView = require("../middlewares/authInView");
 // const authMiddleware = require("../middlewares/auth");
 foodRouter.route("/").get(authInView, foodController.getAllFoods);
-foodRouter.route("/:id").get(authInView, foodController.deleteFoodById);
+foodRouter.route("/:id").delete(authInView, foodController.deleteFoodById);
 module.exports = foodRouter;

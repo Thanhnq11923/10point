@@ -53,9 +53,12 @@
                                                 <h3 class="text-info"><%= food.nation.nationName %></h3>
                                                 <p><%= food.foodDescription %></p>
                                                 <div class="card-actions justify-end">
-                                                    <a href="/page/foods/<%=food._id%>">
+                                                    <!-- <a href="/page/foods/<%=food._id%>">
                                                         <button onclick="return confirm('are you sure??')" class="btn">Delete</button>
-                                                    </a>
+                                                    </a> -->
+                                                    <form action="/page/foods/<%=food._id%>?_method=DELETE" method="POST">
+                                                        <button onclick="return confirm('are you sure??')" class="btn">Delete</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                             </div>
